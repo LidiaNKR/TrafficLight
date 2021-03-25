@@ -8,14 +8,28 @@
 import SwiftUI
 
 struct ContentView: View {
+    
     var body: some View {
-        Text("Hello, world!")
+        ZStack {
+            Color.black
+                .ignoresSafeArea()
+            VStack {
+                CircleExample(color: .red)
+                CircleExample(color: .yellow)
+                CircleExample(color: .green)
+                Spacer()
+                ButtonExample()
+                .padding()
+            }
             .padding()
+        }
     }
 }
+
 
 struct ContentView_Previews: PreviewProvider {
     static var previews: some View {
         ContentView()
+            .previewDevice("iPhone 12")
     }
 }

@@ -11,6 +11,8 @@
 		F8074FC1260D015600C0B4E9 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F8074FC0260D015600C0B4E9 /* ContentView.swift */; };
 		F8074FC3260D015700C0B4E9 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = F8074FC2260D015700C0B4E9 /* Assets.xcassets */; };
 		F8074FC6260D015700C0B4E9 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = F8074FC5260D015700C0B4E9 /* Preview Assets.xcassets */; };
+		F8074FD0260D01FF00C0B4E9 /* CircleExample.swift in Sources */ = {isa = PBXBuildFile; fileRef = F8074FCF260D01FF00C0B4E9 /* CircleExample.swift */; };
+		F8074FD4260D0E2000C0B4E9 /* ButtonExample.swift in Sources */ = {isa = PBXBuildFile; fileRef = F8074FD3260D0E2000C0B4E9 /* ButtonExample.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -20,6 +22,8 @@
 		F8074FC2260D015700C0B4E9 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		F8074FC5260D015700C0B4E9 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		F8074FC7260D015700C0B4E9 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		F8074FCF260D01FF00C0B4E9 /* CircleExample.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CircleExample.swift; sourceTree = "<group>"; };
+		F8074FD3260D0E2000C0B4E9 /* ButtonExample.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ButtonExample.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -54,6 +58,8 @@
 			children = (
 				F8074FBE260D015600C0B4E9 /* TrafficLightApp.swift */,
 				F8074FC0260D015600C0B4E9 /* ContentView.swift */,
+				F8074FD3260D0E2000C0B4E9 /* ButtonExample.swift */,
+				F8074FCF260D01FF00C0B4E9 /* CircleExample.swift */,
 				F8074FC2260D015700C0B4E9 /* Assets.xcassets */,
 				F8074FC7260D015700C0B4E9 /* Info.plist */,
 				F8074FC4260D015700C0B4E9 /* Preview Content */,
@@ -140,6 +146,8 @@
 			files = (
 				F8074FC1260D015600C0B4E9 /* ContentView.swift in Sources */,
 				F8074FBF260D015600C0B4E9 /* TrafficLightApp.swift in Sources */,
+				F8074FD4260D0E2000C0B4E9 /* ButtonExample.swift in Sources */,
+				F8074FD0260D01FF00C0B4E9 /* CircleExample.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
