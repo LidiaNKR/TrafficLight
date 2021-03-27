@@ -8,11 +8,13 @@
 import SwiftUI
 
 struct ButtonExample: View {
+    
     @State private var nameButton = "START"
     
     var body: some View {
         Button(action: {
             nameButton = "NEXT"
+            ContentView().changerColor()
                 })
         {
             Text(nameButton)
