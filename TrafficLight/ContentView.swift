@@ -9,15 +9,12 @@ import SwiftUI
 
 struct ContentView: View {
     
-    @State var redLight = CircleExample(
-        color: .red,
-        opacity: 0.5)
-    @State var yellowLight = CircleExample(
-        color: .yellow,
-        opacity: 0.5)
-    @State var greenLight = CircleExample(
-        color: .green,
-        opacity: 0.5)
+    @State var redLight = CircleExample(color: .red,
+                                        opacity: 0.5)
+    @State var yellowLight = CircleExample(color: .yellow,
+                                           opacity: 0.5)
+    @State var greenLight = CircleExample(color: .green,
+                                          opacity: 0.5)
     
     @State private var nameButton = "START"
     @State var currentLight = CurrentLight.red
@@ -55,8 +52,7 @@ struct ContentView: View {
                 Button(action: {
                     nameButton = "NEXT"
                     changerColor()
-                })
-                {
+                }) {
                     Text(nameButton)
                         .font(.title)
                 }
@@ -66,7 +62,8 @@ struct ContentView: View {
                 .cornerRadius(10)
                 .overlay(
                     RoundedRectangle(cornerRadius: 10)
-                        .stroke(Color.white, lineWidth: 3))
+                        .stroke(Color.white, lineWidth: 3)
+                )
                 .padding()
             }
             .padding()
