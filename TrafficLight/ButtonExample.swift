@@ -8,24 +8,22 @@
 import SwiftUI
 
 struct ButtonExample: View {
-    
-    @State private var nameButton = "START"
+    let title: String
+    let action: () -> Void
     
     var body: some View {
-        Button(action: {
-            nameButton = "NEXT"
-            ContentView().changerColor()
-                })
-        {
-            Text(nameButton)
+        Button(action: action) {
+            Text(title)
                 .font(.title)
+                .fontWeight(.bold)
+                .foregroundColor(Color.white)
         }
+        .padding()
         .frame(width: 150, height: 50)
-        .foregroundColor(.white)
         .background(Color.blue)
         .cornerRadius(10)
         .overlay(
-            RoundedRectangle(cornerRadius: 10)
+            RoundedRectangle(cornerRadius: 10, style: .continuous)
                 .stroke(Color.white, lineWidth: 3)
         )
     }
@@ -33,6 +31,6 @@ struct ButtonExample: View {
 
 struct ButtonExample_Previews: PreviewProvider {
     static var previews: some View {
-        ButtonExample()
+        ButtonExample(title: "START", action: {})
     }
 }

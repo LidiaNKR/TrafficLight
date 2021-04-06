@@ -7,64 +7,46 @@
 
 import SwiftUI
 
+enum CurrentLight {
+    case red, yellow, green
+}
+
 struct ContentView: View {
     
-    @State var redLight = CircleExample(color: .red,
-                                        opacity: 0.5)
-    @State var yellowLight = CircleExample(color: .yellow,
-                                           opacity: 0.5)
-    @State var greenLight = CircleExample(color: .green,
-                                          opacity: 0.5)
-    
     @State private var nameButton = "START"
-    @State var currentLight = CurrentLight.red
-    
-    enum CurrentLight {
-        case red, yellow, green
-    }
+    @State private var currentLight = CurrentLight.red
     
     func changerColor() {
         switch currentLight {
-        case .red:
-            greenLight.opacity = 0.5
-            redLight.opacity = 1
-            currentLight = .yellow
-        case .yellow:
-            redLight.opacity = 0.5
-            yellowLight.opacity = 1
-            currentLight = .green
-        case .green:
-            greenLight.opacity = 1
-            yellowLight.opacity = 0.5
-            currentLight = .red
+        case .red: currentLight = .yellow
+        case .yellow: currentLight = .green
+        case .green: currentLight = .red
         }
     }
+}
     
+extension ContentView {
     var body: some View {
         ZStack {
-            Color.black
-                .ignoresSafeArea()
-            VStack {
-                redLight
-                yellowLight
-                greenLight
+            Color(.black)
+                .edgesIgnoringSafeArea(.all)
+            
+            VStack(spacing: 20) {
+                CircleExample(color: .red,
+                              opacity: currentLight == .red ? 1 : 0.3)
+                CircleExample(color: .yellow,
+                              opacity: currentLight == .yellow ? 1 : 0.3)
+                CircleExample(color: .green,
+                              opacity: currentLight == .green ? 1 : 0.3)
+                
                 Spacer()
-                Button(action: {
-                    nameButton = "NEXT"
+                
+                ButtonExample(title: nameButton) {
+                    if nameButton == "START" {
+                        nameButton = "NEXT"
+                    }
                     changerColor()
-                }) {
-                    Text(nameButton)
-                        .font(.title)
                 }
-                .frame(width: 150, height: 50)
-                .foregroundColor(.white)
-                .background(Color.blue)
-                .cornerRadius(10)
-                .overlay(
-                    RoundedRectangle(cornerRadius: 10)
-                        .stroke(Color.white, lineWidth: 3)
-                )
-                .padding()
             }
             .padding()
         }
